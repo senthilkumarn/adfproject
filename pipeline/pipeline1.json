@@ -26,6 +26,10 @@
 							"dd_folder": {
 								"value": "@pipeline().parameters.pp_input",
 								"type": "Expression"
+							},
+							"dd_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
 							}
 						}
 					},
@@ -36,7 +40,6 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
-						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -57,10 +60,6 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "@activity('Get Metadata1').output",
-						"type": "Expression"
-					},
 					"isSequential": true,
 					"activities": [
 						{
@@ -119,6 +118,10 @@
 										},
 										"dd_folder": {
 											"value": "@pipeline().parameters.pp_input",
+											"type": "Expression"
+										},
+										"dd_filename": {
+											"value": "@item().name",
 											"type": "Expression"
 										}
 									}
