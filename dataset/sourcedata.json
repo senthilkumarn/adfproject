@@ -21,6 +21,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().dd_filename",
+					"type": "Expression"
+				},
 				"folderPath": "input",
 				"fileSystem": "adfproject"
 			},
