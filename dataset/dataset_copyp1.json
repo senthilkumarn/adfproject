@@ -1,5 +1,5 @@
 {
-	"name": "sourcedata",
+	"name": "dataset_copyp1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -12,7 +12,7 @@
 			"dd_folder": {
 				"type": "string"
 			},
-			"dd_filename": {
+			"dd_filenae": {
 				"type": "string"
 			}
 		},
@@ -22,7 +22,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().dd_filename",
+					"value": "@dataset().dd_filenae",
 					"type": "Expression"
 				},
 				"folderPath": {
