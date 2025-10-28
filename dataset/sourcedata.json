@@ -9,7 +9,7 @@
 			"dd_container": {
 				"type": "string"
 			},
-			"dd_input": {
+			"dd_folder": {
 				"type": "string"
 			},
 			"dd_filename": {
