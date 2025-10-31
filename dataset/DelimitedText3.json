@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "concat(@dataset().dd_color,'.csv')",
+					"type": "Expression"
+				},
 				"folderPath": "output/sqloutput",
 				"fileSystem": "adfproject"
 			},
