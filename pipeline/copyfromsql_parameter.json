@@ -53,6 +53,10 @@
 							"dd_filename": {
 								"value": "@pipeline().parameters.pp_tablename",
 								"type": "Expression"
+							},
+							"dd_color": {
+								"value": "@pipeline().parameters.pp_color",
+								"type": "Expression"
 							}
 						}
 					}
