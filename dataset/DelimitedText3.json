@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().dd_color",
+					"value": "@concat(dataset().dd_color,'.csv')",
 					"type": "Expression"
 				},
 				"folderPath": "output/sqloutput",
