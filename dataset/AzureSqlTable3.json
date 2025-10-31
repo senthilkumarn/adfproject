@@ -5,6 +5,14 @@
 			"referenceName": "AzureSqlDatabase4",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"dd_filename": {
+				"type": "string"
+			},
+			"dd_color": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": []

@@ -48,7 +48,13 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable3",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"dd_filename": {
+								"value": "@pipeline().parameters.pp_tablename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
