@@ -71,12 +71,65 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "DelimitedText_db",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"dd_container": {
+											"value": "@item().Source_container",
+											"type": "Expression"
+										},
+										"dd_folder": {
+											"value": "@item().Source_directory",
+											"type": "Expression"
+										},
+										"dd_filename": {
+											"value": "@item().File_name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DelimitedText_db_dest",
+									"type": "DatasetReference",
+									"parameters": {
+										"dest_container": {
+											"value": "@item().Target_container",
+											"type": "Expression"
+										},
+										"dest_folder": {
+											"value": "@item().Target_directory",
+											"type": "Expression"
+										},
+										"dest_filename": {
+											"value": "@item().File_name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
