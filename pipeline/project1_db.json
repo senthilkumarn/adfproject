@@ -153,7 +153,7 @@
 							},
 							"userProperties": [],
 							"linkedServiceName": {
-								"referenceName": "AzureSqlDatabase1",
+								"referenceName": "AzureSqlDatabase4",
 								"type": "LinkedServiceReference"
 							},
 							"typeProperties": {
@@ -161,7 +161,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "INSERT INTO audit_table (File_name, Status)\nVALUES ('@{item().File_name}', 'Success');",
+											"value": "INSERT INTO audit_table (File_name, Status)\nVALUES ('@{item().file_name}', 'Success');",
 											"type": "Expression"
 										}
 									}
