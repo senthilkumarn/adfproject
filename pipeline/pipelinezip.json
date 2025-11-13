@@ -119,7 +119,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@contains(item().name, '.csv')",
+						"value": "@or(contains(item().name, '.csv') , contains(item().name, '.xlsx'))",
 						"type": "Expression"
 					}
 				}
