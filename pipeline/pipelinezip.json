@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy and Extract Zip file",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -64,11 +64,11 @@
 				]
 			},
 			{
-				"name": "Get Metadata1",
+				"name": "Get Metadata",
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "Copy data1",
+						"activity": "Copy and Extract Zip file",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -103,11 +103,11 @@
 				}
 			},
 			{
-				"name": "Filter1",
+				"name": "Filter CSV and Excel",
 				"type": "Filter",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata1",
+						"activity": "Get Metadata",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -126,11 +126,11 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Iterate the files",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Filter1",
+						"activity": "Filter CSV and Excel",
 						"dependencyConditions": [
 							"Succeeded"
 						]
