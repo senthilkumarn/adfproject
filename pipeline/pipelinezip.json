@@ -242,7 +242,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "@concat('INSERT INTO config_table (Project, Source_container, Source_directory, Target_container, Target_directory, File) VALUES (''', '''SalesLT'', ''adfproject'', ''input'', ''adfproject'', ''output'', ''', item().name, ''');')",
+											"value": "@concat('INSERT INTO config_table (Project, Source_container, Source_directory, Target_container, Target_directory, File)VALUES (''', '''SalesLT'', ''adfproject'', ''input'', ''adfproject'', ''output'', ''', item().name, ''');')",
 											"type": "Expression"
 										}
 									}
