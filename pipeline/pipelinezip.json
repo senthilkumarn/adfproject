@@ -253,14 +253,7 @@
 						{
 							"name": "Notebook1",
 							"type": "DatabricksNotebook",
-							"dependsOn": [
-								{
-									"activity": "Script1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -268,7 +261,14 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": ""
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1_zip",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
