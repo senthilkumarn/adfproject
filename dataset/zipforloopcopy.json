@@ -19,7 +19,7 @@
 					"value": "@dataset().dd_filename",
 					"type": "Expression"
 				},
-				"folderPath": "SalesLT/input/SalesLTProductModel.zip",
+				"folderPath": "input/SalesLTProductModel.zip",
 				"fileSystem": "adfproject"
 			},
 			"columnDelimiter": ",",
