@@ -291,14 +291,7 @@
 			{
 				"name": "Lookup1",
 				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "Iterate the files",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -356,7 +349,7 @@
 								"notebookPath": "/Users/nsenthilkumar1991micro@outlook.com/Project/NB3",
 								"baseParameters": {
 									"db_filename": {
-										"value": "@item().name",
+										"value": "@item().File_name",
 										"type": "Expression"
 									}
 								}
