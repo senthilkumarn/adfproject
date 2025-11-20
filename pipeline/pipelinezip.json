@@ -263,7 +263,13 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"notebookPath": "/Users/nsenthilkumar1991micro@outlook.com/Project/NB2"
+								"notebookPath": "/Users/nsenthilkumar1991micro@outlook.com/Project/NB2",
+								"baseParameters": {
+									"db_filename": {
+										"value": "@item().name",
+										"type": "Expression"
+									}
+								}
 							},
 							"linkedServiceName": {
 								"referenceName": "AzureDatabricks1_zip",
