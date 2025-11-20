@@ -317,7 +317,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTabledb",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
